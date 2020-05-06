@@ -6,6 +6,7 @@
   <title>Exercice 2 partie 8 js</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -18,26 +19,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#fable1">Fable 1</a>
+          <a class="nav-link" href="#fable1" id="fableOne" onclick="myMove()">Fable 1</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#fable2">Fable 2</a>
+          <a class="nav-link" href="#fable2" id="fableTwo" onclick="myMoveTwo()">Fable 2</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#fable3">Fable 3</a>
+          <a class="nav-link" href="#fable3" id="fableThree" onclick="myMoveThree()">Fable 3</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#fable4">Fable 4</a>
+          <a class="nav-link" href="#fable4" id="fableFour" onclick="myMoveFour()">Fable 4</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#fable5">Fable 5</a>
+          <a class="nav-link" href="#fable5" id="fableFive" onclick="myMoveFive()">Fable 5</a>
         </li>
       </ul>
     </div>
   </nav>
   <div class="container">
-    <section id="fable1">
-      <div class="col-12">
+    <section>
+      <div class="col-12" id="myAnimation">
         <h1>Les fables de la Fontaines</h1>
         <h2>Jean de la Fontaine</h2>
         <h3>La cigale et la fourmi</h3>
@@ -67,8 +68,8 @@
         </p>
       </div>
     </section>
-    <section id="fable2">
-      <div class="col-12">
+    <section>
+      <div class="col-12" id="myAnimationTwo">
         <h3>Le corbeau et le renard</h3>
         <p>
           Maître Corbeau, sur un arbre perché,<br />
@@ -92,8 +93,8 @@
         </p>
       </div>
     </section>
-    <section id="fable3">
-      <div class="col-12">
+    <section>
+      <div class="col-12" id="myAnimationThree">
         <h3>Le loup et le chien</h3>
         <p>
           Un Loup n'avait que les os et la peau ;<br />
@@ -140,8 +141,8 @@
         </p>
       </div>
     </section>
-    <section id="fable4">
-      <div class="col-12">
+    <section>
+      <div class="col-12" id="myAnimationFour">
         <h3>Le rat de ville et le rat des champs</h3>
         <p>
           Autrefois le Rat de ville<br />
@@ -175,8 +176,8 @@
         </p>
       </div>
     </section>
-    <section id="fable5">
-      <div class="col-12">
+    <section>
+      <div class="col-12" id="myAnimationFive">
         <h3>Le lion et le moucheron</h3>
         <p>
           « Va-t'en, chétif Insecte, excrément de la terre<br />
@@ -220,6 +221,134 @@
       </div>
     </section>
   </div>
+
+  <script>
+
+    const linkArray = document.querySelectorAll('.nav-link');
+
+    function resetColor(index, bg, color) {
+      for (i = 0; i < linkArray.length; i++) {
+        linkArray[i].style.backgroundColor = '';
+        linkArray[i].style.color = '';
+      }
+      linkArray[index].style.backgroundColor = bg;
+      linkArray[index].style.color = color;
+    }
+
+    linkArray[0].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.body.scrollTop = 100;
+      document.documentElement.scrollTop = 100;
+      resetColor(0, 'black', 'white');
+    })
+
+    linkArray[1].addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.scrollTop = 690;
+      document.documentElement.scrollTop = 690;
+      resetColor(1, 'black', 'white');
+    })
+
+    linkArray[2].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.body.scrollTop = 1180;
+      document.documentElement.scrollTop = 1180;
+      resetColor(2, 'black', 'white');
+    })
+
+    linkArray[3].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.body.scrollTop = 2220;
+      document.documentElement.scrollTop = 2220;
+      resetColor(3, 'black', 'white');
+    })
+
+    linkArray[4].addEventListener('click', function (e) {
+      e.preventDefault();
+      document.body.scrollTop = 2950;
+      document.documentElement.scrollTop = 2950;
+      resetColor(4, 'black', 'white');
+    })
+  </script>
+
+  <script>
+    function myMove() {
+      let elem = document.getElementById("myAnimation");
+      let pos = -100;
+      let id = setInterval(frame, 10);
+
+      function frame() {
+        if (pos == 0) {
+          clearInterval(id);
+        } else {
+          pos++;
+          // elem.style.top = pos + 'px'; 
+          elem.style.left = pos + 'px';
+        }
+      }
+    }
+
+    function myMoveTwo() {
+      let elem = document.getElementById("myAnimationTwo");
+      let pos = -100;
+      let id = setInterval(frame, 10);
+
+      function frame() {
+        if (pos == 0) {
+          clearInterval(id);
+        } else {
+          pos++;
+          elem.style.left = pos + 'px';
+        }
+      }
+    }
+
+    function myMoveThree() {
+      let elem = document.getElementById("myAnimationThree");
+      let pos = -100;
+      let id = setInterval(frame, 10);
+
+      function frame() {
+        if (pos == 0) {
+          clearInterval(id);
+        } else {
+          pos++;
+          elem.style.left = pos + 'px';
+        }
+      }
+    }
+
+    function myMoveFour() {
+      let elem = document.getElementById("myAnimationFour");
+      let pos = -100;
+      let id = setInterval(frame, 10);
+
+      function frame() {
+        if (pos == 0) {
+          clearInterval(id);
+        } else {
+          pos++;
+          elem.style.left = pos + 'px';
+        }
+      }
+    }
+
+    function myMoveFive() {
+      let elem = document.getElementById("myAnimationFive");
+      let pos = -100;
+      let id = setInterval(frame, 10);
+
+      function frame() {
+        if (pos == 0) {
+          clearInterval(id);
+        } else {
+          pos++;
+          elem.style.left = pos + 'px';
+        }
+      }
+    }
+  </script>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
@@ -229,6 +358,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
+
+  <!-- voir js animation sur w3school -->
+  <!-- scrollreveal -->
+  <!-- anchor smooth js -->
 </body>
 
 </html>
