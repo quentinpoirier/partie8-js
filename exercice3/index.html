@@ -9,7 +9,6 @@
 <body>
   <h1>La fille aux yeux d'or</h1>
   <h2>Honoré de Balzac</h2>
-  <img src="assets/img/prague-980732_1920.jpg">
   <p>
     Un des spectacles où se rencontre le plus d'épouvantement est certes l'aspect général de la population parisienne,
     peuple horrible à voir, hâve, jaune, tanné. Paris n'est-il pas un vaste champ incessamment remué par une tempête
@@ -348,112 +347,122 @@
     intérêt de notre histoire se trouvera justifié. Quod erat demonstrandum, ce qui était à démontrer, s'il est permis
     d'appliquer les formules de la scolastique à la science des moeurs.
   </p>
-  <img src="assets/img/books-1281581_1280.jpg">
 </body>
 <script>
-  let pArray = document.getElementsByTagName('p')
+  // let pArray = document.querySelectorAll('p')
 
-  window.onscroll = function () {
-    scrollFunction()
-    scrollFunctionTwo()
-    scrollFunctionThree()
-    scrollFunctionFour()
-    scrollFunctionFive()
-    scrollFunctionSix()
-    scrollFunctionSeven()
-    scrollFunctionEight()
-    scrollFunctionNine()
-    scrollFunctionTen()
-    scrollFunctionEleven()
-    scrollFunctionTwelve()
-  };
+  // window.onscroll = function () {
+  //   scrollFunction()
+  //   scrollFunctionTwo()
+  //   scrollFunctionThree()
+  //   scrollFunctionFour()
+  //   scrollFunctionFive()
+  //   scrollFunctionSix()
+  //   scrollFunctionSeven()
+  //   scrollFunctionEight()
+  //   scrollFunctionNine()
+  //   scrollFunctionTen()
+  //   scrollFunctionEleven()
+  //   scrollFunctionTwelve()
+  // };
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-      pArray[0].style.display = "block";
-    } else {
-      pArray[0].style.display = "none";
-    }
-  }
 
-  function scrollFunctionTwo() {
-    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-      pArray[1].style.display = "block";
-    } else {
-      pArray[1].style.display = "none";
-    }
-  }
+  // function scrollFunction() {
+  //   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+  //     pArray[0].style.display = "block";
+  //   } else {
+  //     pArray[0].style.display = "none";
+  //   }
+  // }
 
-  function scrollFunctionThree() {
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-      pArray[2].style.display = "block";
-    } else {
-      pArray[2].style.display = "none";
-    }
-  }
-  function scrollFunctionFour() {
-    if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
-      pArray[3].style.display = "block";
-    } else {
-      pArray[3].style.display = "none";
-    }
-  }
-  function scrollFunctionFive() {
-    if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
-      pArray[4].style.display = "block";
-    } else {
-      pArray[4].style.display = "none";
-    }
-  }
-  function scrollFunctionSix() {
-    if (document.body.scrollTop > 1700 || document.documentElement.scrollTop > 1700) {
-      pArray[5].style.display = "block";
-    } else {
-      pArray[5].style.display = "none";
-    }
-  }
-  function scrollFunctionSeven() {
-    if (document.body.scrollTop > 1900 || document.documentElement.scrollTop > 1900) {
-      pArray[6].style.display = "block";
-    } else {
-      pArray[6].style.display = "none";
-    }
-  }
-  function scrollFunctionEight() {
-    if (document.body.scrollTop > 2300 || document.documentElement.scrollTop > 2300) {
-      pArray[7].style.display = "block";
-    } else {
-      pArray[7].style.display = "none";
-    }
-  }
-  function scrollFunctionNine() {
-    if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
-      pArray[8].style.display = "block";
-    } else {
-      pArray[8].style.display = "none";
-    }
-  }
-  function scrollFunctionTen() {
-    if (document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
-      pArray[9].style.display = "block";
-    } else {
-      pArray[9].style.display = "none";
-    }
-  }
-  function scrollFunctionEleven() {
-    if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 3000) {
-      pArray[10].style.display = "block";
-    } else {
-      pArray[10].style.display = "none";
-    }
-  }
-  function scrollFunctionTwelve() {
-    if (document.body.scrollTop > 3300 || document.documentElement.scrollTop > 3300) {
-      pArray[11].style.display = "block";
-    } else {
-      pArray[11].style.display = "none";
-    }
-  }
+  // function scrollFunctionTwo() {
+  //   if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+  //     pArray[1].style.display = "block";
+  //   } else {
+  //     pArray[1].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionThree() {
+  //   if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+  //     pArray[2].style.display = "block";
+  //   } else {
+  //     pArray[2].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionFour() {
+  //   if (document.body.scrollTop > 1100 || document.documentElement.scrollTop > 1100) {
+  //     pArray[3].style.display = "block";
+  //   } else {
+  //     pArray[3].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionFive() {
+  //   if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
+  //     pArray[4].style.display = "block";
+  //   } else {
+  //     pArray[4].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionSix() {
+  //   if (document.body.scrollTop > 1500 || document.documentElement.scrollTop > 1500) {
+  //     pArray[5].style.display = "block";
+  //   } else {
+  //     pArray[5].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionSeven() {
+  //   if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+  //     pArray[6].style.display = "block";
+  //   } else {
+  //     pArray[6].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionEight() {
+  //   if (document.body.scrollTop > 2100 || document.documentElement.scrollTop > 2100) {
+  //     pArray[7].style.display = "block";
+  //   } else {
+  //     pArray[7].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionNine() {
+  //   if (document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500) {
+  //     pArray[8].style.display = "block";
+  //   } else {
+  //     pArray[8].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionTen() {
+  //   if (document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
+  //     pArray[9].style.display = "block";
+  //   } else {
+  //     pArray[9].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionEleven() {
+  //   if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 3000) {
+  //     pArray[10].style.display = "block";
+  //   } else {
+  //     pArray[10].style.display = "none";
+  //   }
+  // }
+
+  // function scrollFunctionTwelve() {
+  //   if (document.body.scrollTop > 3300 || document.documentElement.scrollTop > 3300) {
+  //     pArray[11].style.display = "block";
+  //   } else {
+  //     pArray[11].style.display = "none";
+  //   }
+  // }
 </script>
+<script src="assets/script.js"></script>
 
 </html>
